@@ -23,7 +23,7 @@ head
   div(style="display: grid; grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)); grid-gap: 3rem; padding: 1.5rem;")
     p(class="title2") Characters
     div
-      input.input(type="text" placeholder="Buscar Personaje" v-model="searchQuery" @change="search ()" style="width: 100%; font-size: 2rem; padding: 1rem; font-family: 'Kdam Thmor Pro', sans-serif; background-color: transparent; color: #97CE4C; border: 0.5px dotted #97CE4C;")
+      input.input(type="text" placeholder="Search" v-model="searchQuery" @change="search ()" style="width: 100%; font-size: 2rem; padding: 1rem; font-family: 'Kdam Thmor Pro', sans-serif; background-color: transparent; color: #97CE4C; border: 0.5px dotted #97CE4C;")
       //- button(@click="search") Buscar
     
 
