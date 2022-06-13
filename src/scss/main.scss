@@ -1,0 +1,235 @@
+*,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: unset;
+}
+
+a{
+  text-decoration: none !important;
+  color: #fff;
+  &:hover{
+    color: #97CE4C;
+    text-shadow: 0.1rem 0.1rem 1rem #73ff00;
+  }
+}
+
+.row {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0px;
+    counter-reset: div;
+  }
+  
+    
+  /* spanning cols, complete values missing */
+  
+  .col {
+    grid-column: auto/span 12;
+    
+    &-2{
+      grid-column: auto/span 2;
+    }
+    &-3{
+      grid-column: auto/span 3;
+    }
+    &-6{
+      grid-column: auto/span 6;
+    }
+    &{
+      grid-column: auto/span 8;
+    }
+  }
+  /* spanning rows , complete values missing*/
+  
+  .row-2 {
+    grid-row: auto/span 2;
+  }
+
+  html{
+    font-size: 62.5%;
+  }
+
+  body{
+    background-color: rgb(45, 45, 45);
+    color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+
+    &::-webkit-scrollbar {
+      background-color: #fff;
+      width: 16px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background-color: rgb(45, 45, 45);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: #97CE4C;
+      border-radius: 16px;
+      border: 4px solid rgb(45, 45, 45);
+    }
+    
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+  }
+
+  .alert {
+    max-height: 3rem;
+    position: relative;
+    padding: 0.05rem;
+    color: var(--bs-alert-color);
+    background-color: var(--bs-alert-bg);
+    border: var(--bs-alert-border);
+    border-radius: var(--bs-alert-border-radius,0);
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .3rem;
+    &-danger {
+      --bs-alert-color:	#e668b1;
+      --bs-alert-bg: 	#e89ac860;
+      --bs-alert-border-color: #ff81ca;
+    }
+    &-success {
+      --bs-alert-color: #a1ff1d;
+      --bs-alert-bg: #d8fda46c;
+      --bs-alert-border-color: #d2e3ba;
+    }
+    &-secondary {
+      --bs-alert-color: #41464b;
+      --bs-alert-bg: #e2e3e5;
+      --bs-alert-border-color: #d3d6d8;
+    }
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}
+
+.title{
+  font-size:1.5rem;
+  letter-spacing: .3rem;
+}
+
+.title2{
+  font-size:3rem;
+  letter-spacing: .3rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.card{
+  background-color: rgb(27, 27, 27);
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 1rem 1rem rgba(18, 18, 18, 0.418);
+  transition: 0.5s;
+  min-height: 305px;
+
+  &:-dead{
+    border: 0.1rem solid #97CE4C;
+  }
+  &:-alive{
+    border: 0.1rem solid #E89AC7;
+  }
+
+  &:hover{
+    transform: scale(1.03);
+    transition: 0.5s;
+    box-shadow: 0rem 0rem 1rem 1rem rgba(18, 18, 18, 0.556);
+  }
+}
+.banner{
+  width: 100%;
+  height: 60vh;
+  // background-image: url(https://wallpapercave.com/wp/wp4935839.jpg);
+  transition: 1s;
+  background-image: url(https://wallpapercave.com/wp/wp5481735.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeats;
+  position: relative;
+
+  &:hover{
+    transition: 1s;
+    background: url(https://images7.alphacoders.com/633/633188.jpg);
+    background-repeat: no-repeats;
+    background-position: center;
+  }
+
+  &-text{
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 30rem;
+    text-align: center;
+  }
+
+  &-image{
+    max-width: 400px;
+    min-width: 200px;
+    width: 40vw;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 12rem;
+    text-align: center;
+  }
+
+  &-dark{
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(0,0,0,0.5);
+  }
+}
+
+.text-montserrat{
+  font-family: 'Montserrat';
+}
+
+.not-fount{
+  position: relative;
+  padding: 0.05rem;
+  color: var(--bs-alert-color);
+  background-color: var(--bs-alert-bg);
+  border: var(--bs-alert-border);
+  border-radius: var(--bs-alert-border-radius,0);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: .3rem;
+  font-size: 3rem;
+}
+
+.pagination{
+  width: 100%;
+  
+  &-item{
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(27, 27, 27);
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &:hover{
+      background-color: #41464b;
+    }
+  }
+
+  &-active{
+      background-color: #41464b;
+  }
+}
+
